@@ -1,12 +1,13 @@
 const express = require('express')
 const usuarios = require('./controladores/usuarios')
 const login = require('./controladores/login')
-const verificaLogin = require('./filtros/verificaLogin')
+const verificaLogin = require('./filtros/verificaLogin');
+const { novaPostagem } = require('./controladores/postagens');
 
 const rotas = express();
 
 // cadastro de usuario 
-rotas.post('/cadastro', usuarios.cadastraUsuario);
+rotas.post('/cadastro', usuarios.cadastrarUsuario);
 
 // login 
 rotas.post('/login', login.login)
@@ -19,5 +20,6 @@ rotas.get('/perfil', usuarios.obterPerfil)
 rotas.put('/perfil', usuarios.atualizarPerfil)
 
 // postagens
+rotas.post('/postagem', novaPostagem)
 
 module.exports = rotas;
