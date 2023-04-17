@@ -4,7 +4,8 @@
   "description": "- Fazer login\r - Fazer cadastro\r - Ver os dados do seu perfil\r - Editar os dados do seu perfil\r - Ver postagens de outras pessoas\r     - Ver quatidade de curtidas numa postagem\r     - Ver os comentários em uma postagem\r - Curtir postagens de outras pessoas\r - Comentar em postagens",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon ./src/index.js"
+    "dev": "nodemon ./src/index.js",
+    "start": "node ./src/index.js"
   },
   "keywords": [],
   "author": "",
