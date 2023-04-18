@@ -7,7 +7,7 @@ const knex = require('../conexao')
 
 const rotas = express();
 
-rotas.get('/perfil', async (req, res) => {
+rotas.get('/categoria', async (req, res) => {
     try {
       const categorias = await knex('categorias')
   
