@@ -3,6 +3,7 @@ const usuarios = require('./controladores/usuarios')
 const login = require('./controladores/login')
 const verificaLogin = require('./filtros/verificaLogin');
 const postagens = require('./controladores/postagens');
+const knex = require('../conexao')
 
 const rotas = express();
 
@@ -15,7 +16,7 @@ rotas.get('/perfil', async (req, res) => {
       return res.status(500).json(error.message)
     }
   })
-  
+
 // cadastro de usuario 
 rotas.post('/cadastro', usuarios.cadastrarUsuario);
 
